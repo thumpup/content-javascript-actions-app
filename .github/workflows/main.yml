@@ -7,11 +7,11 @@ jobs:
     steps:
       # To use this repository's private action,
       # you must check out the repository
-      - name: Checkout
+      - name: checkout
         uses: actions/checkout@v2 # This action checks-out your repository under $GITHUB_WORKSPACE, so your workflow can access it.
       - name: Hello world action step
-        uses: ./ # Uses an action in the root directory
         id: hello
+        uses: ./ # Uses an action in the root directory
         with:
           who-to-greet: 'thumpup' # change it to your name
       # Use the output from the `hello` step
